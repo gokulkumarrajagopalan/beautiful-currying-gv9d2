@@ -1,4 +1,5 @@
-import "./styles.css";
+import React from "react";
+import "./styles.css"; // Make sure to import your CSS file
 import Header from "./Header";
 import Namepage from "./Namepage";
 import Skills from "./Skills";
@@ -9,10 +10,10 @@ export default function App() {
   return (
     <div className="App">
       <Header />
-      <Namepage />
-      <Skills />
-      <Experience />
-      <ContactComponent />
+      <Namepage id="portfolio" />
+      <Skills id="skills" />
+      <Experience id="experience" />
+      <ContactComponent id="contact" />
     </div>
   );
 }

@@ -1,22 +1,49 @@
 import React from "react";
-//import "./styles.css"; // Import your CSS file
+import "./styles.css";
 
 function Header() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="Header">
       <nav>
         <ul className="NavList">
-          <li className="PortfolioItem">PORTFOLIO</li>
+          <li
+            className="NavItem PortfolioItem"
+            onClick={() => scrollToSection("portfolio")}
+          >
+            PORTFOLIO
+          </li>
           <div className="TopRightItems">
-            <li className="AboutItem">
+            <li
+              className="NavItem AboutItem"
+              onClick={() => scrollToSection("about")}
+            >
               ABOUT
-              <div className="Tooltip">
-                <p className="Skills">Skill</p>
-                <p className="Experience">Experience</p>
-                <p className="Education">Education</p>
-              </div>
             </li>
-            <li className="ContactItem">CONTACT</li>
+            <li
+              className="NavItem Skills"
+              onClick={() => scrollToSection("skills")}
+            >
+              SKILLS
+            </li>
+            <li
+              className="NavItem Experience"
+              onClick={() => scrollToSection("experience")}
+            >
+              EXPERIENCE
+            </li>
+            <li
+              className="NavItem ContactItem"
+              onClick={() => scrollToSection("contact")}
+            >
+              CONTACT
+            </li>
           </div>
         </ul>
       </nav>
