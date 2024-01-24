@@ -11,7 +11,7 @@ import ReactIcon from "./reactIcon.png";
 function Skills() {
   return (
     <div className="skills-container">
-      <h2>Skills</h2>
+      <h2 className="title ">SKILLS</h2>
 
       <div className="technology-section">
         <h3>Front-end Technologies</h3>
